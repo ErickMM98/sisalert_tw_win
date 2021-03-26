@@ -12,6 +12,8 @@ import feedparser
 url_ssn = "http://www.ssn.unam.mx/sismicidad/ultimos/"
 xml_ssn = "http://www.ssn.unam.mx/rss/ultimos-sismos.xml"
 
+lim_mag = 0
+
 def read_xml_last_sis():
     feed = feedparser.parse(xml_ssn)
     data_sism = feed.entries[0]
@@ -24,6 +26,9 @@ def read_xml_last_sis():
     return title, mag, lat, lon
 
 
+def show_not_windows(_mag):
+    if _mag > lim_mag:
+        continue
 
 if __name__ == '__main__':
     title, mag, lat, lon = read_xml_last_sis()
