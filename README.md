@@ -1,2 +1,3 @@
-# sisalert_tw_win
+# Alerta sísmica simple para Windows.
+ 
  Simple alarma sísmica para Windows.
