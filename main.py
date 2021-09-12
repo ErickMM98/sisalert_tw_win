@@ -13,7 +13,7 @@ from win10toast import ToastNotifier
 url_ssn = "http://www.ssn.unam.mx/sismicidad/ultimos/"
 xml_ssn = "http://www.ssn.unam.mx/rss/ultimos-sismos.xml"
 
-lim_mag = 5.3
+lim_mag = 0
 
 def read_xml_last_sis():
     feed = feedparser.parse(xml_ssn)
@@ -39,4 +39,5 @@ def show_not_windows(_mag,_title):
 
 if __name__ == '__main__':
     title, mag, lat, lon = read_xml_last_sis()
+    print(title)
     show_not_windows(mag,title)
